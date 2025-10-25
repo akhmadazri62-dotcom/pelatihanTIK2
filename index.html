@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Antrian Dokter Gigi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Klinik Dokter Gigi Sehat</h1>
+            <p class="subtitle">Sistem Registrasi Antrian Online</p>
+        </header>
+        
+        <div class="main-content">
+            <section class="registration-form">
+                <h2>Form Pendaftaran</h2>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telepon">Nomor Telepon</label>
+                        <input type="tel" id="telepon" name="telepon" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="keluhan">Keluhan</label>
+                        <select id="keluhan" name="keluhan" required>
+                            <option value="">Pilih keluhan</option>
+                            <option value="Sakit gigi">Sakit gigi</option>
+                            <option value="Pembersihan karang gigi">Pembersihan karang gigi</option>
+                            <option value="Tambal gigi">Tambal gigi</option>
+                            <option value="Cabut gigi">Cabut gigi</option>
+                            <option value="Konsultasi">Konsultasi</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dokter">Pilih Dokter</label>
+                        <select id="dokter" name="dokter" required>
+                            <option value="">Pilih dokter</option>
+                            <option value="drg. Sari Indah">drg. Sari Indah</option>
+                            <option value="drg. Budi Santoso">drg. Budi Santoso</option>
+                            <option value="drg. Maya Wulandari">drg. Maya Wulandari</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit">Daftar Antrian</button>
+                </form>
+            </section>
+            
+            <section class="queue-display">
+                <h2>Informasi Antrian</h2>
+                
+                <div class="current-queue">
+                    <p>Antrian Saat Ini</p>
+                    <div class="queue-number" id="currentQueue">A-01</div>
+                    <p id="currentPatient">drg. Sari Indah - Rina</p>
+                </div>
+                
+                <div class="queue-controls">
+                    <button id="nextQueueBtn">Panggil Antrian Berikutnya</button>
+                    <button id="resetQueueBtn">Reset Antrian Hari Ini</button>
+                </div>
+                
+                <h3>Daftar Antrian</h3>
+                <div class="queue-list" id="queueList">
+                    <!-- Daftar antrian akan ditampilkan di sini -->
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>Klinik Dokter Gigi Sehat &copy; <span id="currentYear"></span>. Layanan 24 Jam.</p>
+            <p>Hubungi: (021) 123-4567 | Jl. Kesehatan No. 123, Jakarta</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
